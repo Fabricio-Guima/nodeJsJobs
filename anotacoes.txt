@@ -31,3 +31,7 @@ executar todos os seeders:
 
 npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
+
+Quero executar apenas um seeder
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed --seed src/database/seeders/20220923215243-seed-companies-table.js
