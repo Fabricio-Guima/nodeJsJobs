@@ -1,0 +1,33 @@
+npm i -D typescript //typescript
+npm i -D ts-node-dev // tipo um nodemon
+npm i -D @types/express //express tipado
+npm i -D sequelize-cli
+npm i -D 
+
+depois 
+
+npm i express sequelize pg dotenv
+
+criar tsconfig:
+npx tsc --init
+
+startar o server:
+npm run dev
+
+apos toda config do sequelize, rode:
+npx sequelize-cli db:create
+
+criar migration: 
+npx sequelize-cli migration:generate --name create-candidates-table
+
+rodar migrations para criar no banco:
+npx sequelize-cli db:migrate
+
+criar seeds para uma tabela:
+npx sequelize-cli seed:generate 
+--name seed-candidates-table
+
+executar todos os seeders:
+
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
