@@ -8,4 +8,8 @@ import { Job } from './job'
 Company.hasMany(Job)
 Job.belongsTo(Company)
 
+// N para N
+Job.belongsToMany(Candidate, { through: 'job_candidates' })
+Candidate.belongsToMany(Job, { through: 'job_candidates' })
+
 export { Candidate, Company, Job }

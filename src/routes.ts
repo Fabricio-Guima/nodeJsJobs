@@ -24,5 +24,8 @@ router.post('/jobs', jobsController.save)
 router.get('/jobs/:id', jobsController.show)
 router.put('/jobs/:id', jobsController.update)
 router.delete('/jobs/:id', jobsController.delete)
+//N para N
+router.post('/jobs/:id/addCandidate', jobsController.addCandidate)
+router.delete('/jobs/:id/removeCandidate', jobsController.removeCandidate)
 
 export { router }
